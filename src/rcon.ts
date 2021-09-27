@@ -173,12 +173,14 @@ export class Rcon {
                 })
             })
         }
-
+        return createSendPromise();
+        /*
         if (type == PacketType.Auth) {
             return createSendPromise()
         } else {
             return await this.sendQueue.add(createSendPromise)
         }
+        */
     }
 
     private handlePacket(data: Buffer) {
